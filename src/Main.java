@@ -36,7 +36,9 @@ public class Main {
 
         int year = 1200;
 
-        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+        if (year < 1584) {
+            System.out.println(year + " год не является високосным");
+        } else if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
             System.out.println(year + " год является високосным");
         } else {
             System.out.println(year + " год не является високосным");
@@ -60,25 +62,29 @@ public class Main {
         int monthNumber = 13;
 
         switch (monthNumber) {
-            case (1):
-            case (2):
-            case (3):
+            case 12:
+            case 1:
+            case 2:
                 System.out.println("ЗИМА");
+                break;
 
-            case (4):
-            case (5):
-            case (6):
+            case 3:
+            case 4:
+            case 5:
                 System.out.println("ВЕСНА");
+                break;
 
-            case (7):
-            case (8):
-            case (9):
+            case 6:
+            case 7:
+            case 8:
                 System.out.println("ЛЕТО");
+                break;
 
-            case (10):
-            case (11):
-            case (12):
+            case 9:
+            case 10:
+            case 11:
                 System.out.println("ОСЕНЬ");
+                break;
 
             default:
                 System.out.println("Ошибка, введите корректный номер месяца");
